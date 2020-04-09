@@ -67,7 +67,7 @@ client.on('message', async msg =>
       }
   }
   question = qwords.join(" ");
-  if (duration <= 0) duration = 30;
+  if (duration <= 0) duration = 20;
   
   var result = "";
   var oui = [];
@@ -208,13 +208,13 @@ client.on('message', async msg =>
                     ".vote -t <secondes> // temps de parole sans vote (pas de défaut)\n"+
                     ".vote -x // demander le hash (en DM seulement)\n"+
                     ".vote // aide\n\n"+
-                    "// Le vote dure 30 secondes.\n"+
+                    "// Le vote dure 20 secondes.\n"+
                     "// Il faut cliquer oui "+ouiicon+", non "+nonicon+" ou abstention "+absicon+".\n\n"+
                     "// Limite: Pendant le vote, chaque option est +1.\n"+
                     "// Limite: Le vote pseudo n'est pas vraiment anonyme (tooltip sur reaction pendant le vote)\n"+
                     "// Note: Si vous votez plusieurs fois, le dernier vote est déterminant.\n"+
                     "// Note: Le hash des membres change chaque heure.\n\n"+
-                    "// v1.0.3 © 2020 matthias.buercher@verts.vd.ch"); 
+                    "// v1.0.2 © 2020 matthias.buercher@verts.vd.ch"); 
   }
           
 });
