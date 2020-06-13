@@ -1,13 +1,12 @@
 // Invite
-// https://discordapp.com/oauth2/authorize?client_id=692639102595498014&scope=bot&permissions=2112
+// https://discordapp.com/oauth2/authorize?client_id=CLIENT&scope=bot&permissions=2112
 
 // Upload monitor
-
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.login (process.env.TOKEN);
-const botid = "692639102595498014";
+const botid = process.env.CLIENT;
 const seed = 89018921891;
 
 /*
@@ -29,7 +28,7 @@ function hash(uid)
 
 client.on('message', async msg =>
 {
-  var prefix = ".vote" ;
+  var prefix = process.env.PREFIX ;
   
   
   
@@ -37,7 +36,7 @@ client.on('message', async msg =>
   
   if (msg.content.startsWith("voter ici") || msg.content.includes(botid)) 
   {
-    await msg.reply("J'écoute sur .vote");
+    await msg.reply("J'écoute sur "+process.env.PREFIX);
     return;
   }
    
@@ -202,12 +201,12 @@ client.on('message', async msg =>
   }
   else
   {
-    msg.channel.send("Utilisation:\n\n.vote -q <question> // vote ouvert\n"+
-                    ".vote -a <question> // vote pseudo avec hash\n"+
-                    ".vote -t <secondes> -q <question> // durée en secondes (défaut 20)\n"+
-                    ".vote -t <secondes> // temps de parole sans vote (pas de défaut)\n"+
-                    ".vote -x // demander le hash (en DM seulement)\n"+
-                    ".vote // aide\n\n"+
+    msg.channel.send("Utilisation:\n\n"+process.env.PREFIX+" -q <question> // vote ouvert\n"+
+                    +process.env.PREFIX+" -a <question> // vote pseudo avec hash\n"+
+                    +process.env.PREFIX+" -t <secondes> -q <question> // durée en secondes (défaut 20)\n"+
+                    +process.env.PREFIX+" -t <secondes> // temps de parole sans vote (pas de défaut)\n"+
+                    +process.env.PREFIX+" -x // demander le hash (en DM seulement)\n"+
+                    +process.env.PREFIX+" // aide\n\n"+
                     "// Le vote dure 30 secondes.\n"+
                     "// Il faut cliquer oui "+ouiicon+", non "+nonicon+" ou abstention "+absicon+".\n\n"+
                     "// Limite: Pendant le vote, chaque option est +1.\n"+
