@@ -12,24 +12,43 @@ Simple voting bot for Discord french speaking
 
 ## Syntax
 
-.v -q question
+.vote -q question
 
-.v -a question
+.vote -a question
 
-.v -t seconds -q question
+.vote -t seconds -q question
 
-.v -t seconds -a question
+.vote -t seconds -a question
 
-.v -t seconds
+.vote -t seconds
 
-.v -x
+.vote -x
 
-.v 
+.vote 
+
+## Config Vars 
+
+CLIENT from Discors (692639102595498014 or 721498126598406154)
+PREFIX how to talk to the bot (.vote or .v2)
+SERVER server of the current instances (Glitch or Heroku)
+TOKEN from Discord
 
 ## Permissions
 
 - Write messages
 - React
+
+2112
+
+## Invite bot
+
+Voter-ici
+
+https://discordapp.com/oauth2/authorize?client_id=692639102595498014&scope=bot&permissions=2112
+
+Voter-ici 2 
+
+https://discordapp.com/oauth2/authorize?client_id=721498126598406154&scope=bot&permissions=2112
 
 
 ## Made by [matti](https://www.belle-nuit.com)
