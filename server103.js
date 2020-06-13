@@ -214,7 +214,7 @@ client.on('message', async msg =>
                     "// Limite: Le vote pseudo n'est pas vraiment anonyme (tooltip sur reaction pendant le vote)\n"+
                     "// Note: Si vous votez plusieurs fois, le dernier vote est déterminant.\n"+
                     "// Note: Le hash des membres change chaque heure.\n\n"+
-                    "// v1.0.4 © 2020 matthias.buercher@verts.vd.ch "+process.env.SERVER); 
+                    "// v1.0.3 © 2020 matthias.buercher@verts.vd.ch"); 
   }
           
 });
@@ -222,7 +222,7 @@ client.on('message', async msg =>
 
 require('http').createServer(function(request,response)
 {
-  response.end("Bonjour! Je suis chez " + process.env.SERVER);
+  response.end("Hallo!");
   
 }).listen(process.env.PORT);
 
