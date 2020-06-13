@@ -202,11 +202,11 @@ client.on('message', async msg =>
   else
   {
     msg.channel.send("Utilisation:\n\n"+process.env.PREFIX+" -q <question> // vote ouvert\n"+
-                    +process.env.PREFIX+" -a <question> // vote pseudo avec hash\n"+
-                    +process.env.PREFIX+" -t <secondes> -q <question> // durée en secondes (défaut 20)\n"+
-                    +process.env.PREFIX+" -t <secondes> // temps de parole sans vote (pas de défaut)\n"+
-                    +process.env.PREFIX+" -x // demander le hash (en DM seulement)\n"+
-                    +process.env.PREFIX+" // aide\n\n"+
+                    process.env.PREFIX+" -a <question> // vote pseudo avec hash\n"+
+                    process.env.PREFIX+" -t <secondes> -q <question> // durée en secondes (défaut 20)\n"+
+                    process.env.PREFIX+" -t <secondes> // temps de parole sans vote (pas de défaut)\n"+
+                    process.env.PREFIX+" -x // demander le hash (en DM seulement)\n"+
+                    process.env.PREFIX+" // aide\n\n"+
                     "// Le vote dure 30 secondes.\n"+
                     "// Il faut cliquer oui "+ouiicon+", non "+nonicon+" ou abstention "+absicon+".\n\n"+
                     "// Limite: Pendant le vote, chaque option est +1.\n"+
